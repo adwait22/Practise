@@ -1,0 +1,28 @@
+<div class="container">
+  <table class="table table-striped">
+
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Location</th>
+        <th scope="col">Manage</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor = "let user of users; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.location}}</td>
+        <button type="button" class ="btn btn-primary" (click) = "onDelete(i)" >Delete</button>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
